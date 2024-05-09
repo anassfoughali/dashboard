@@ -1,0 +1,132 @@
+
+/*font*/
+@import url('https://fonts.cdnfonts.com/css/proxima-nova-condensed');
+/*var*/
+:root {
+  --mainblue: #0085ff;
+  --white: #fafafa;
+  --seconblue:#0d1b2a;
+  --shadow: rgba(13, 27, 42, 0.6);
+}
+/*body*/
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--white);
+  color: var(--seconblue);
+  font-family: 'Proxima Nova Condensed', sans-serif;
+}
+/*icon*/
+.icon {
+  vertical-align: middle;
+  line-height: 1px;
+  font-size: 20px;
+}
+.icon_header {
+  vertical-align: middle;
+  line-height: 1px;
+  font-size: 26px;
+}
+.icon, .icon_header {
+  margin-right: 5px;
+}
+
+.close_icon {
+  color: red;
+  margin-left: 30px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+
+/*search*/
+.grid-container {
+  display: grid;
+  grid-template-columns: 260px 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 3fr;
+  grid-template-areas:
+    'sidebar header header header'
+    'sidebar main main main';
+  height: 100vh;
+}
+
+/*header*/
+.header {
+  grid-area: header;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px 0 30px;
+  box-shadow: 0 6px 7px -3px var(--shadow);
+}
+/*menu*/
+.menu-icon {
+  display: none;
+}
+/*sidebear*/
+#sidebar {
+  grid-area: sidebar;
+  height: 100%;
+  background-color: var(--white);
+  overflow-y: auto;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  box-shadow: 0 6px 7px -3px var(--shadow);
+}
+
+.sidebar-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px 0px 30px;
+  margin-bottom: 30px;
+  
+}
+
+.sidebar-title > span {
+  display: none;
+  
+}
+
+.sidebar-brand {
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.sidebar-list {
+  padding: 0;
+  list-style-type: none;
+}
+
+.sidebar-list-item {
+  padding: 20px 20px 20px 20px;
+  font-size: 18px;
+}
+
+
+.sidebar-list-item > a {
+  text-decoration: none;
+  color: black;
+  
+}
+
+.sidebar-list-item > a:hover{
+  color: rgb(0, 117, 255);
+  cursor: pointer;
+  
+}
+
+.sidebar-list-item > a:active{
+  background-color: rgb(0, 117, 255);
+  color: var(--white);
+
+}
+
+.sidebar-responsive {
+  display: inline !important;
+  position: absolute;
+  
+  z-index: 12 !important;
+}
